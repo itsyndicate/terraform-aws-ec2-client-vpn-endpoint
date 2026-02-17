@@ -77,7 +77,7 @@ variable "self_service_saml_provider_arn" {
 variable "session_timeout_hours" {
   description = "The maximum session duration. Valid values: 8, 10, 12, 24"
   type        = number
-  default     = 24
+  default     = 8
   validation {
     condition     = contains([8, 10, 12, 24], var.session_timeout_hours)
     error_message = "The maximum session duration must be one of: 8, 10, 12, 24."
